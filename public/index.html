@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📡 INTERDIMENSIONAL PIZZA COUPON 📡</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #260e1c;
+      font-family: 'Impact', 'Arial Black', 'Helvetica', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    /* coupon / flyer style — chaotic, glitch, retro zine */
+    .coupon {
+      max-width: 550px;
+      background: #fae84e;
+      background: linear-gradient(135deg, #ffeb99, #ffc285);
+      border: 8px dashed #b3446c;
+      transform: rotate(-1deg);
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: 20px 20px 0 #4f1a35;
+    }
+
+    .glitch-text {
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+      color: #be2e6b;
+      text-shadow: 3px 3px 0 #ffc800;
+    }
+
+    .dimension-badge {
+      background: black;
+      color: #ffd966;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      margin: 0.5rem 0;
+    }
+
+    .pizza-img-css {
+      width: 100px;
+      height: 100px;
+      background: #e05a2a;
+      border-radius: 50%;
+      margin: 1rem auto;
+      position: relative;
+      box-shadow: 0 0 0 10px #fccf7c;
+    }
+
+    .pizza-img-css::before {
+      content: "🍕";
+      position: absolute;
+      font-size: 4rem;
+      left: 22px;
+      top: 18px;
+    }
+
+    .fine-print {
+      font-size: 0.65rem;
+      font-family: monospace;
+      margin-top: 1rem;
+      background: #000000aa;
+      color: #f5e2a4;
+      padding: 0.4rem;
+    }
+
+    button {
+      background: #3e1c2c;
+      border: none;
+      color: #ffdf9c;
+      padding: 0.5rem 1rem;
+      margin: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="coupon">
+  <div class="glitch-text">⚡ PIZZA BEYOND REALMS ⚡</div>
+  <div class="dimension-badge">Valid in 7 known dimensions + void</div>
+  <div class="pizza-img-css"></div>
+  <h2 style="color:#a13154;">ONE FREE SLICE of <br> "Quantum Quattro Formaggi"</h2>
+  <p>✨ toppings exist in superposition ✨<br> 🌀 each bite may shift your timeline</p>
+  <button id="redeemBtn">🌀 REDEEM COUPON 🌀</button>
+  <div id="messageBox" style="margin-top: 0.5rem; font-size:0.8rem; font-family: monospace;"></div>
+  <div class="fine-print">
+    * not valid on Thursdays in universe #42. Void where paradox.
+  </div>
+</div>
+<script>
+  document.getElementById('redeemBtn').addEventListener('click', function() {
+    const msgDiv = document.getElementById('messageBox');
+    const coupons = [
+      "✅ Coupon accepted! Your pizza arrives... but sideways.",
+      "🌀 Slice materialized in your past. Enjoy retroactively!",
+      "🍕 Glitch: you now have 3 identical slices. Share?",
+      "⚠️ The cheese is sentient but friendly. Bon appétit!"
+    ];
+    const randomMsg = coupons[Math.floor(Math.random() * coupons.length)];
+    msgDiv.innerHTML = randomMsg;
+    msgDiv.style.fontWeight = "bold";
+    msgDiv.style.backgroundColor = "#f7da8a";
+    msgDiv.style.padding = "0.3rem";
+    msgDiv.style.borderRadius = "20px";
+  });
+</script>
+</body>
+</html>
